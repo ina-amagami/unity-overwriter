@@ -2,8 +2,7 @@
 
 <img src="example.png" width="472px">
   
-通常、Unityに同じ名前のファイルをドラッグ＆ドロップした場合は必ず複製ファイルが作られます。  
-Overwriterを導入することで、上書きするか複製するか選べるようになります。  
+Unityにアセットを追加する際に上書きを可能にする拡張です。
   
 詳しい解説は[**こちら**](https://gc-career.com/tech-blog/overwriter/)
 
