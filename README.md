@@ -4,7 +4,7 @@
   
 Unityにアセットを追加する際に上書きを可能にする拡張です。
   
-詳しい解説は[**こちら**](https:///overwriter/)
+詳しい解説は[**こちら**](https://amagamina.jp/overwriter/)
 
 ## ライセンス条項
 
