@@ -11,4 +11,4 @@ Unityにアセットを追加する際に上書きを可能にする拡張です
 MITライセンス
 https://opensource.org/licenses/mit-license.php  
   
-Copyright (c) 2019 ina-amagami (ina_amagami@gc-career.com)
+Copyright (c) 2019 ina-amagami (ina@amagamina.jp)
