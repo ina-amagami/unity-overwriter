@@ -1,6 +1,6 @@
 # unity-overwriter
 
-<img src="example.png" width="472px">
+![unity-overwriter](https://amagamina.jp/wp-content/uploads/2019/07/overwriter-test.gif)
   
 Unityにアセットを追加する際に上書きを可能にする拡張です。
   
