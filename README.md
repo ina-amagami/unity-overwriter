@@ -6,6 +6,18 @@ Unityにアセットを追加する際に上書きを可能にする拡張です
   
 詳しい解説は[**こちら**](https://amagamina.jp/overwriter/)
 
+## インストール
+
+upm経由でインストールする場合は `https://github.com/ina-amagami/unity-overwriter.git` を指定して下さい。
+
+```manifest.json
+{
+  "dependencies": {
+    "jp.amagamina.unity-overwriter": "https://github.com/ina-amagami/unity-overwriter.git"
+  }
+}
+```
+
 ## ライセンス条項
 
 MITライセンス

@@ -1,0 +1,9 @@
+{
+  "name": "jp.amagamina.overwriter",
+  "version": "1.0.0",
+  "displayName": "Overwriter",
+  "description": "Extension to allow overwriting when importing assets.",
+  "author": "ina-amagami <ina@amagamina.jp>",
+  "license": "MIT",
+  "dependencies": {}
+}
