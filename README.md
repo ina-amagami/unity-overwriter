@@ -2,13 +2,15 @@
 
 ![unity-overwriter](https://amagamina.jp/wp-content/uploads/2019/07/overwriter-test.gif)
   
-Unityにアセットを追加する際に上書きを可能にする拡張です。
+Unityにアセットを追加する際に上書きを可能にする拡張です。本パッケージをそのままAssets以下の任意の場所に配置するだけで動作します。
   
 詳しい解説は[**こちら**](https://amagamina.jp/overwriter/)
 
-## インストール
+## UPMインストール
 
-upm経由でインストールする場合は `https://github.com/ina-amagami/unity-overwriter.git` を指定して下さい。
+upm経由でインストールする場合は `https://github.com/ina-amagami/unity-overwriter.git` を指定して下さい。  
+  
+`Packages/manifest.json` のdependencies内に追加してもインストールできます。
 
 ```manifest.json
 {
