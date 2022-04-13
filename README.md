@@ -15,7 +15,7 @@ upm経由でインストールする場合は `https://github.com/ina-amagami/un
 ```manifest.json
 {
   "dependencies": {
-    "jp.amagamina.unity-overwriter": "https://github.com/ina-amagami/unity-overwriter.git"
+    "jp.amagamina.overwriter": "https://github.com/ina-amagami/unity-overwriter.git"
   }
 }
 ```
