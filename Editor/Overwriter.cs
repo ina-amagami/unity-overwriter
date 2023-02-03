@@ -42,7 +42,6 @@ public class Overwriter : AssetPostprocessor
 	}
 
 	const string SourceExistFormat = "「{0}」と「{1}」のファイル内容が完全一致しているため、置き換えツールの動作を停止します。\n本当にインポートしますか？";
-	const string MessageFormat = "「{0}」という名前のアセットが既に存在します。アセットを置き換えますか？";
 
 	static void OnPostprocessAllAssets(
 	  string[] importedAssets,
@@ -225,19 +224,25 @@ public class Overwriter : AssetPostprocessor
 		// ソースファイルのパスでソート
 		existAssets.Sort((a, b) => a.Source.Path.CompareTo(b.Source.Path));
 
+		var isFirst = true;
+		var isSameAction = false;
+		var result = 0;
+		
 		foreach (var exist in existAssets)
 		{
 			string importedPath = exist.Imported.Path;
 			string importedAssetDirectory = Path.GetDirectoryName(importedPath);
 			string existingAssetPath = string.Format("{0}/{1}", importedAssetDirectory, exist.Source.FileName);
-			string message = string.Format(MessageFormat, exist.Source.FileName);
 
-			int result = EditorUtility.DisplayDialogComplex(
-				existingAssetPath.Replace('\\', '/'),
-				message,
-				"置き換える",
-				"中止",
-				"両方とも残す");
+			if (!isSameAction)
+			{
+				result = EditorUtility.DisplayDialogComplex(
+					existingAssetPath.Replace('\\', '/'),
+					"同じ名前のアセットが既に存在します。アセットを置き換えますか？",
+					"置き換える",
+					"中止",
+					"両方とも残す");
+			}
 
 			if (result == 0)
 			{
@@ -248,6 +253,19 @@ public class Overwriter : AssetPostprocessor
 			else if (result == 1)
 			{
 				AssetDatabase.DeleteAsset(importedPath);
+			}
+
+			if (isFirst)
+			{
+				if (existAssets.Count > 2)
+				{
+					isSameAction = EditorUtility.DisplayDialog(
+						"確認",
+						"同じ操作を以降すべてに適用しますか？",
+						"はい",
+						"いいえ");
+				}
+				isFirst = false;
 			}
 		}
 	}
